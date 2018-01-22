@@ -2,13 +2,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-image: url('./images/tablet-resolution-1.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+
 }
 
 .about-us-content {
-  margin-top : 150px;
+  /* margin-top : 150px; */
   background-color:midnightblue;
   color: #ffffff;
 }
@@ -21,6 +19,16 @@ body {
 
 .footer-content {
   background-color: orange;
+}
+
+.banner-logo{
+  margin: 30px;
+}
+
+.banner{
+  background-image: url('./images/tablet-resolution-1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media all and (min-width: 1024px) and (max-width: 1280px) { }
