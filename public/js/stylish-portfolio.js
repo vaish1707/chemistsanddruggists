@@ -1,6 +1,10 @@
 (function($) {
   "use strict"; // Start of use strict
 
+  $('a.menu-toggle').click(function(e){
+    console.log("Clicked");
+  })
+
   // Closes the sidebar menu
   $(".menu-toggle").click(function(e) {
     e.preventDefault();
@@ -25,6 +29,7 @@
 
   // Closes responsive menu when a scroll trigger link is clicked
   $('#sidebar-wrapper .js-scroll-trigger').click(function() {
+    console.log("Clicked");
     $("#sidebar-wrapper").removeClass("active");
     $(".menu-toggle").removeClass("active");
     $(".menu-toggle > .fa-bars, .menu-toggle > .fa-times").toggleClass("fa-bars fa-times");

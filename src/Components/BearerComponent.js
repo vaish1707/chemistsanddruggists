@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import SubBearerComponent from './SubBearerComponent';
+
 
 const SubComponent = (props) => {
     console.log("SubComponentttt");
@@ -32,7 +32,6 @@ export default class BearerComponent extends Component {
                 <section className="content-section bg-primary text-white text-center" id="services">
       <div className="container">
         <div className="content-section-heading">
-          <h3 className="text-secondary mb-0"></h3>
           <h2 className="mb-5">{this.props.sectionname}</h2>
         </div>
         <div className="row">

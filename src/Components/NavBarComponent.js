@@ -1,14 +1,26 @@
 import React, { Component } from 'react';
-
+import $ from 'jquery';
 class NavBarComponent extends Component {
+
 
     constructor(props) {
         super(props);
         console.log(this.props);
+        this.openSideBar = this.openSideBar.bind(this);
     }
+
+    openSideBar(){
+        console.log('open side bar');
+        $("#sidebar-wrapper").toggleClass("active");
+        $(".menu-toggle > .fa-bars, .menu-toggle > .fa-times").toggleClass("fa-bars fa-times");
+        $(this).toggleClass("active");
+        
+    }
+
+
     render() {
         return (<div className="banner">
-            <a className="menu-toggle rounded" href="#">
+            <a className="menu-toggle rounded" onClick={this.openSideBar.bind(this)}>
                 <i className="fa fa-bars"></i>
             </a><nav id="sidebar-wrapper">
                 <ul className="sidebar-nav">
@@ -36,7 +48,8 @@ class NavBarComponent extends Component {
             <div className="masthead d-flex">
                 <div className="container text-center my-auto">
                 <div className="banner-logo">
-                        <img src="http://www.wlac.org/assets/siteDesq/5223/gallery/capital-chemist-logo.png">
+                        <img alt="ChemistandDruggist"
+                        src="http://www.wlac.org/assets/siteDesq/5223/gallery/capital-chemist-logo.png">
                         </img>
                     </div>
                     <h3 className="mb-1">{this.props.title}</h3>
