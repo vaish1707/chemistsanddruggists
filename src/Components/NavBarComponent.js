@@ -7,6 +7,7 @@ class NavBarComponent extends Component {
         super(props);
         console.log(this.props);
         this.openSideBar = this.openSideBar.bind(this);
+        this.scrollToOption = this.scrollToOption.bind(this);
     }
 
     openSideBar(){
@@ -17,6 +18,31 @@ class NavBarComponent extends Component {
         
     }
 
+    scrollToOption(e,id) {
+        let useragent =window.navigator.userAgent;
+
+        switch(e) {
+            case 'about-us' : 
+            ((useragent.includes('Android')) || (useragent.includes('iPhone'))) ? 
+            $("html, body").animate({ scrollTop:  $('body').height() + 100 }, 600) : $("html, body").animate({ scrollTop:  $('body').height() }, 600);
+            break;
+            case 'contact' :
+             ((useragent.includes('Android')) || (useragent.includes('iPhone'))) ? 
+            $("html, body").animate({ scrollTop:  7000 }, 600) : $("html, body").animate({ scrollTop:  3000 }, 600); 
+            break;
+            case 'bearer' :
+            ((useragent.includes('Android')) || (useragent.includes('iPhone'))) ? 
+            $("html, body").animate({ scrollTop:  1510 }, 600) : $("html, body").animate({ scrollTop:  1300 }, 600);
+            break;
+            case 'home' :
+            $("html, body").animate({ scrollTop:  0 }, 600);
+            break;
+        }
+    let scrollId = "#" + e;
+    console.log('Eventt',e);
+    
+    }
+
 
     render() {
         return (<div className="banner">
@@ -25,22 +51,19 @@ class NavBarComponent extends Component {
             </a><nav id="sidebar-wrapper">
                 <ul className="sidebar-nav">
                     <li className="sidebar-brand">
-                        <a className="js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+                        <a className="js-scroll-trigger" href="#page-top">Step In for More Options !!</a>
                     </li>
                     <li className="sidebar-nav-item">
-                        <a className="js-scroll-trigger" href="#page-top">Home</a>
+                        <a className="js-scroll-trigger" onClick={this.scrollToOption.bind(this,"home")}>Home</a>
                     </li>
                     <li className="sidebar-nav-item">
-                        <a className="js-scroll-trigger" href="#about">About</a>
+                        <a className="js-scroll-trigger" onClick={this.scrollToOption.bind(this,"about-us")}>About</a>
                     </li>
                     <li className="sidebar-nav-item">
-                        <a className="js-scroll-trigger" href="#services">Services</a>
+                        <a className="js-scroll-trigger" onClick={this.scrollToOption.bind(this,"bearer")}>Office Bearer Members</a>
                     </li>
                     <li className="sidebar-nav-item">
-                        <a className="js-scroll-trigger" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li className="sidebar-nav-item">
-                        <a className="js-scroll-trigger" href="#contact">Contact</a>
+                        <a className="js-scroll-trigger" onClick={this.scrollToOption.bind(this,"contact")}>Contact Us</a>
                     </li>
                 </ul>
             </nav>
@@ -49,15 +72,17 @@ class NavBarComponent extends Component {
                 <div className="container text-center my-auto">
                 <div className="banner-logo">
                         <img alt="ChemistandDruggist"
-                        src="http://www.wlac.org/assets/siteDesq/5223/gallery/capital-chemist-logo.png">
+                        src= "/images/logo.png" width="150" height="120">
                         </img>
                     </div>
                     <h3 className="mb-1">{this.props.title}</h3>
-                   
-                    <h5 className="mb-5">
+                    <h5 className="frontfont">
+                        Chennai District (Estd 1926 / Regd No. 6/1944/45)
+                    </h5>
+                    <h5 className="frontfont">
                         {this.props.tag}
                     </h5>
-                    <a className="btn btn-primary btn-xl js-scroll-trigger" href="#about">{this.props.stepIn}</a>
+                    <a className="btn btn-primary btn-xl js-scroll-trigger" onClick={this.scrollToOption.bind(this,"about-us")}>{this.props.stepIn}</a>
                 </div>
                 <div className="overlay"></div>
             </div>
