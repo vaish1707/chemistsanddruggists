@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import $ from 'jquery';
 
 export default class FooterComponent extends Component {
 
@@ -16,7 +17,7 @@ export default class FooterComponent extends Component {
       }
 
     scrollToTop(e) {
-       
+        $("html, body").animate({ scrollTop:  0 }, 600);
      
     }
     render() {
@@ -24,11 +25,11 @@ export default class FooterComponent extends Component {
             <div>
                 <footer className="footer text-center footer-content">
                     <div className="container">
-                        <div><p><strong>Registration No : 123456789567</strong></p></div>
-                        <div><p>#19, Jeth Nagar First Main Road,
-            Mandaveli,Chennai-600028.
+                        <div className = "footerFont"><p><strong>Contact us</strong></p></div>
+                        <div><p>#6, 3rd Floor, Bhattad Towers, 30 West Cott Road, Royapettah, Chennai - 600014.
         </p>
                         </div>
+                        <div><p><strong>Phone : 2851 2926 / 2852 8891</strong></p></div>
                         <p><b>Copyright &copy;2018</b></p>
                     </div>
                 </footer>

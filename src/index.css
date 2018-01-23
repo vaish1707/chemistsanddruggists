@@ -26,11 +26,20 @@ body {
 }
 
 .banner{
-  background-image: url('./images/tablet-resolution-1.jpg');
+  background-image: url('./images/medicine.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.footerFont {
+  font-size: 30px;
+}
+.frontfont {
+  margin-top : 10px;
+  margin-bottom:10px;
+  font-size:20px;
+  color: midnightblue;
+}
 @media all and (min-width: 1024px) and (max-width: 1280px) { }
 @media all and (min-width: 768px) and (max-width: 1024px) { }
  
