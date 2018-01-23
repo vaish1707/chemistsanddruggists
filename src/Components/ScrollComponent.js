@@ -23,11 +23,11 @@ Vix id propriae eleifend, ius ancillae imperdiet vituperata ad, ius ornatus dolo
     console.log($(element).offset(event).top);
     let element = `#${value}`;
  //   let offset = $(element).offset().bind(this)
-   
+    
    
 
     $('html, body').animate({
-        scrollTop: $(element).height()
+        scrollTop: $(element).offset().top
     }, 600);
 }
 

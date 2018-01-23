@@ -23,7 +23,7 @@ export default class FooterComponent extends Component {
     render() {
         return (
             <div>
-                <footer className="footer text-center footer-content">
+                <footer id="contact" className="footer text-center footer-content">
                     <div className="container">
                         <div className = "footerFont"><p><strong>Contact us</strong></p></div>
                         <div><p>#6, 3rd Floor, Bhattad Towers, 30 West Cott Road, Royapettah, Chennai - 600014.
