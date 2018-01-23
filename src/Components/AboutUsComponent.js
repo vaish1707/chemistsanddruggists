@@ -14,7 +14,7 @@ class AboutUsComponent extends Component {
     }
 
     render() {
-        return (<div className="about-us-content">
+        return (<div className="about-us-content" id="about">
             <header className="masthead d-flex">
                 <div className="container text-center my-auto">
                     <h1 className="mb-1">About Us</h1>

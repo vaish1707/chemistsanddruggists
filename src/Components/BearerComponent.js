@@ -28,7 +28,7 @@ export default class BearerComponent extends Component {
     }
     render() {
         return (
-            <div>
+            <div id="bearer">
                 <section className="content-section bg-primary text-white text-center" id="services">
       <div className="container">
         <div className="content-section-heading">
